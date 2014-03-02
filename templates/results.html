@@ -2,8 +2,12 @@ $def with (match, urls1, urls2)
 
 $if match:
 	The match percent is $match
+	<div class="left">
 	$for url in urls1:
-		<img src= $url height="100" width="100"> 
+		<img src= $url height="200" width="200"> 
+	</div>
+	<div class="right">
 	$for url in urls2:
-		<img src= $url height="100" width="100">
+		<img src= $url height="200" width="200">
+	</div> 
 

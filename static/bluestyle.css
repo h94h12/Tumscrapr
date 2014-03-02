@@ -1,0 +1,91 @@
+/**
+color scheme: http://www.colourlovers.com/palette/1242828/Magical_Moments
+written by Victoria Lo
+**/
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+}
+
+body {
+    background: #225584;
+    font-family: "Bookman Old Style", serif;
+    height: 100%;
+}
+
+h1 {
+//header1
+    color: #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+    border-top: 1px solid #FFFFFF;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-transform: lowercase;
+}
+
+#container {
+    position: relative;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #000000;
+    background: #01355F;
+    border: 1px solid #FFFFFF;
+    border-radius: 30px;
+    /*margin: 0 auto !important;*/
+    padding-top: 100px;
+    padding-bottom: 100px;
+    box-shadow: 0px 1px 1px #000000;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.text {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+
+input {
+    background: #72B8D9;
+    border: 1px solid #225584;
+    border-radius: 10px;
+    padding-left: 10px;
+    box-shadow: 0px 1px 1px #000000;
+    -webkit-transition: background 1s; /* For Safari 3.1 to 6.0 */
+    transition: background 1s;
+    font-family: "Bookman Old Style", serif;
+}
+
+input[type=text] {
+    padding: 10px;
+    margin: 10px;
+    color: #FFFFFF;
+    background: #aeaeae;
+    
+}
+
+input[type=submit] {
+    padding: 10px;
+    color: #FFFFFF;
+    background: #aeaeae;
+    font-family: "Bookman Old Style", serif;
+}
+
+input[type=submit]:hover {
+    padding: 10px;
+    color: #FFFFFF;
+    font-family: "Bookman Old Style", serif;
+    background: #72B8D9;
+    -webkit-transition: background 1s; /* For Safari 3.1 to 6.0 */
+    transition: background 1s;
+}
+
