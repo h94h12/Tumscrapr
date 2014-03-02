@@ -46,7 +46,23 @@ def compare_image_sets(a, b, size):
 	average = (float)(sum(max_matches))/len(max_matches)
 	return average
 			
+def compare(a, b):
+	other = a
+        my = b
 
+        other_imgs = [post for post in get_img_posts(other) if post is not ' ']
+        my_imgs = [post for post in get_img_posts(my) if post is not ' ']
+        size = min(len(other_imgs), len(my_imgs))
+
+        for i in range(0,size):
+                m = 'me{}'.format(i)
+                o = 'other{}'.format(i)
+                print 'Downloading:  '+my_imgs[i]+'   '+other_imgs[i]
+                load_image(my_imgs[i], m)
+                load_image(other_imgs[i], o)
+        average = compare_image_sets('me', 'other', size)
+        print 'The match percent is {}'.format(average)
+	return average
 
 if __name__ == '__main__':
 	other = str(sys.argv[1])
