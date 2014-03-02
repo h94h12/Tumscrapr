@@ -47,6 +47,9 @@ def compare_image_sets(a, b, size):
 	return average
 			
 def compare(a, b):
+	data = [] # data will be [average, [list of urls], [another list of urls]]		
+	urls_1 = []
+	urls_2 = []
 	other = a
         my = b
 
@@ -57,12 +60,17 @@ def compare(a, b):
         for i in range(0,size):
                 m = 'me{}'.format(i)
                 o = 'other{}'.format(i)
+		urls_1.append(my_imgs[i])
+		urls_2.append(other_imgs[i])
                 print 'Downloading:  '+my_imgs[i]+'   '+other_imgs[i]
                 load_image(my_imgs[i], m)
                 load_image(other_imgs[i], o)
         average = compare_image_sets('me', 'other', size)
         print 'The match percent is {}'.format(average)
-	return average
+	data.append(average)
+	data.append(urls_1)
+	data.append(urls_2)
+	return data 
 
 if __name__ == '__main__':
 	other = str(sys.argv[1])

@@ -25,9 +25,14 @@ class index:
         else:
             # form.d.boe and form['boe'].value are equivalent ways of
             # extracting the validated arguments from the form.
-            match = compare(form['user1'].value, form['user2'].value)
-	    return "The match percent between %s and %s is %s" % (form['user1'].value, form['user2'].value, match)
+            data = compare(form['user1'].value, form['user2'].value)
+	    match = data[0]
+	    user1_urls = data[1]
+	    user2_urls = data[2] 
+	    # return "The match percent between %s and %s is %s" % (form['user1'].value, form['user2'].value, match)
+	    return render.results(match, user1_urls, user2_urls) 	
 
+	
 if __name__=="__main__":
     web.internalerror = web.debugerror
     app.run()

@@ -1,0 +1,9 @@
+$def with (match, urls1, urls2)
+
+$if match:
+	The match percent is $match
+	$for url in urls1:
+		<img src= $url height="100" width="100"> 
+	$for url in urls2:
+		<img src= $url height="100" width="100">
+
